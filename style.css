@@ -4,15 +4,17 @@
 body{
   background-image: url(canyon.jpeg);
   background-size: 100% 100%;
+
+  background-repeat: no-repeat;
 }
 header input{
-  width: 100%;
-  max-width: 200px;
-  padding: 30px 15px;
+  width: 25%;
+  height: 60px;
   border: none;
   outline: none;
   background-color: rgba(255,255,255,0.3);
-  font-size: 20px;
+  font-size: 30px;
+
   font-weight: 300;
   transition: 02.s ease-out;
   color: white;
@@ -21,8 +23,11 @@ header input{
 .h1-tag{
   color: antiquewhite;
   font-family: 'Monoton', cursive;
+
+  font-weight: bolder;
   text-align: center;
-  font-size: 60px;
+  font-size: 70px;
+
 }
 .h1-tag:hover{
   transition: all .2s ease-in-out; 
@@ -32,12 +37,40 @@ header input{
 }
 .pure-button{
   background-color: antiquewhite;
+
+  border-radius:50px;
+  height:70px;
+  width: 120px;
+
 }
 .pure-button:hover{
 background-color: rgb(163, 104, 26);
 color: white;
 }
-.custom-btn{
-  border-radius:50px ;
+
+.custom-form{
+  margin-top: 150px;
+  margin-left: 50px;
+  
 }
+.air-quality{
+  font-size: 70px;
+  font-family:'Monoton', cursive;
+  font-weight:bolder;
+  position: relative;
+  margin-left: 650px;
+  margin-top: 150px;
+  color: antiquewhite;
+}
+.air-quality:hover{
+  transition: all .2s ease-in-out; 
+ transform: scale(1.1); 
+ color: rgb(163, 104, 26);
+ cursor: default;
+}
+
+
+
+
+
   
