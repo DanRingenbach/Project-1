@@ -7,69 +7,54 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link
-  rel="stylesheet"
-  href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-  integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
-  crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
 
 
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" >
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 
 
   <link rel="stylesheet" href="style.css">
-  <!-- Compressed CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+
 
 
   <title>Project-1</title>
 </head>
 
 <body>
-  <div class="app-wrap">
-    <header>
-      <h1 class="h1-tag">GRAND DAY OUT</h1>
-      <form class="pure-form">
-        <input id="user-input" type="text" placeholder="search for city..." class="pure-input-rounded" />
-        <button id='select-city'  type="submit" class="pure-button custom-btn">Search</button>
-      </form>
-    </header>
-    <main>
-      <section class="air-quality">
-        <div class="air-index">air-index<span></span></div>
-      </section>
-    </main>
-  </div>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
   <div class="app-wrap">
     <h1 class="h1-tag">GRAND DAY OUT</h1>
     <header>
       <form class="pure-form custom-form">
-        <input type="text" placeholder="search for city..." class="pure-input-rounded ">
-        <button type="submit" class="pure-button custom-btn">Search</button>
-    </form>
+        <input id='user-input' type="text" placeholder="search for city..." class="pure-input-rounded ">
+        <button id='select-city' type="submit" class="pure-button custom-btn">Search</button>
+      </form>
     </header>
     <main>
       <section class="air-quality">
         <div class="air-index">Air-index</div>
-    
+        <div id="rec-index">
+          <!-- rec area cards dynamically display here -->
+
+        </div>
+
         <span><i class='fas fa-wind' style='font-size:70px;color:antiquewhite'></i></span>
-        
-        
-        
+
+
+
       </section>
     </main>
   </div>
 
 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="script.js"></script>
 </body>
 
