@@ -9,7 +9,7 @@ $('#select-city').click(function (event) {
   var userInput = $('#user-input').val()
   console.log(userInput)
   getApi();
-  
+
   function getApi() {
     var requestUrl = 'https://upenn-cors-anywhere.herokuapp.com/https://ridb.recreation.gov/api/v1/recareas?query=' + userInput + '&limit=50&offset=0&full=true';
 
@@ -17,8 +17,10 @@ $('#select-city').click(function (event) {
       .then(function (response) {
         return response.json();
       })
-      .then(function (data) {
+        .then(function (data) {
         console.log(data)
+        var name = $('<h3>').text(data.RECDATA[0].RecAreaName)
+        $('#rec-index').append(name)
       })
   }
 })
