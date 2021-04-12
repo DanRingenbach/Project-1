@@ -4,7 +4,6 @@
 body{
   background-image: url(canyon.jpeg);
   background-size: 100% 100%;
-
   background-repeat: no-repeat;
 }
 header input{
@@ -14,7 +13,6 @@ header input{
   outline: none;
   background-color: rgba(255,255,255,0.3);
   font-size: 30px;
-
   font-weight: 300;
   transition: 02.s ease-out;
   color: white;
@@ -57,9 +55,10 @@ color: white;
   font-size: 70px;
   font-family:'Monoton', cursive;
   font-weight:bolder;
-  position: relative;
-  margin-left: 650px;
-  margin-top: 150px;
+  position: absolute;
+  left: 60%;
+  bottom: 150px;
+  flex-wrap: wrap;
   color: antiquewhite;
 }
 .air-quality:hover{
@@ -68,9 +67,53 @@ color: white;
  color: rgb(163, 104, 26);
  cursor: default;
 }
+.flex-container{
+  position:absolute;
+  bottom: 20%;
+  padding: 20px;
+}
+.card {
+  border-radius:20px ;
+  width: 150px;
+  height: 150px;
+  background-color: antiquewhite;
+    display: inline-block;
+
+}
+.container {
+  text-align: center;
+  padding-top: 50px;
+}
 
 
-
-
-
+@media only screen and (max-width: 650px){
+  #user-input {
+    width: 65%;
+    
+  }
+}
+@media only screen and (max-width: 650px){
+  header {
+    position: relative;
+    bottom: 60px;
+  
+  }
+}
+@media only screen and (max-width: 1350px){
+  .card {
+    flex-wrap: wrap;
+    visibility: hidden;
+   
+  }
+}
+@media only screen and (max-width: 650px){
+  .air-quality {
+    position: relative;
+    bottom: 50%;
+    left: 20%;
+    
+    
+  
+  }
+}
   
