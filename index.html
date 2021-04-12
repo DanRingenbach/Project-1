@@ -7,33 +7,77 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
     integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+
+
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-  <title>project 1</title>
+
+
+
+  <title>Project-1</title>
 </head>
 
 <body>
-  <div class="pure-u-1">
+
+  <div class="app-wrap">
     <h1 class="h1-tag">GRAND DAY OUT</h1>
     <header>
       <form class="pure-form custom-form">
-        <input type="text" placeholder="search for city..." class="pure-input-rounded ">
-        <button type="submit" class="pure-button custom-btn">Search</button>
+        <input id='user-input' type="text" placeholder="search for city..." class="pure-input-rounded ">
+        <button id='select-city' type="submit" class="pure-button custom-btn">Search</button>
       </form>
     </header>
     <main>
-        <section class="air-quality">
-          <div class="air-index">Air-index</div>
-          <span><i class='fas fa-wind' style='font-size:70px;color:antiquewhite'></i></span>
-        </section>
+      <section class="air-quality">
+        <div class="air-index">
+          <h3>Air-index</h3>
+          <span><i class='fas fa-wind' style='font-size:70px;color:rgb(74, 129, 173)'></i></span>
+        </div>
+        <div id="rec-index">
+          <!-- rec area cards dynamically display here -->
+
+        </div>
+      </section>
+      <div class="flex-container">
+        <div class="card">
+          <div class="container">
+            <h4><a href="" id="">link</a></h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="container">
+            <h4><a href="#" id="">link</a></h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="container">
+            <h4><a href="#" id="">link</a></h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="container">
+            <h4><a href="#" id="">link</a></h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="container">
+            <h4><a href="#" id="">link</a></h4>
+          </div>
+        </div>
+      </div>
+
+
     </main>
 
 
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="script.js"></script>
 </body>
 
