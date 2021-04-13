@@ -1,83 +1,93 @@
-</html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
     integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
 
-
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
-
-  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
-
-
-
-  <title>Project-1</title>
+  <title>project 1</title>
 </head>
 
 <body>
-
-  <div class="app-wrap">
-    <h1 class="h1-tag">GRAND DAY OUT</h1>
-    <header>
-      <form class="pure-form custom-form">
-        <input id='user-input' type="text" placeholder="search for city..." class="pure-input-rounded ">
-        <button id='select-city' type="submit" class="pure-button custom-btn">Search</button>
-      </form>
-    </header>
-    <main>
-      <section class="air-quality">
-        <div class="air-index">
-          <h3>Air-index</h3>
-          <span><i class='fas fa-wind' style='font-size:70px;color:rgb(74, 129, 173)'></i></span>
-        </div>
-        <div id="rec-index">
-          <!-- rec area cards dynamically display here -->
-
-        </div>
-      </section>
-      <div class="flex-container">
-        <div class="card">
-          <div class="container">
-            <h4><a href="" id="">link</a></h4>
+  <div class="header">
+    <form>
+      <h1>GRAND DAY OUT</h1>
+      <div class="form-box">
+        <input type="text" class="search-field location" placeholder="SEARCH CITY...." id="input-search">
+        <button class="search-btn" id="input-button" type="submit">SEARCH</button>
+      </div>
+    </form>
+  </div>
+  <div class="card-container hide">
+    <div class="col s12 m6 custom-cards">
+      <div class="card blue-grey darken-1 round-card">
+        <div class="card-content white-text">
+          <span class="card-title">Card Title</span>
+          <p>Description:</p>
+          <div class="air-index">
+            <h6>Air-index:</h6>
+            <span><i class='fas fa-wind' style='font-size:40px;color:rgb(74, 129, 173)'></i></span>
           </div>
         </div>
-        <div class="card">
-          <div class="container">
-            <h4><a href="#" id="">link</a></h4>
-          </div>
-        </div>
-        <div class="card">
-          <div class="container">
-            <h4><a href="#" id="">link</a></h4>
-          </div>
-        </div>
-        <div class="card">
-          <div class="container">
-            <h4><a href="#" id="">link</a></h4>
-          </div>
-        </div>
-        <div class="card">
-          <div class="container">
-            <h4><a href="#" id="">link</a></h4>
-          </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
         </div>
       </div>
+    </div>
+    <div class="col s12 m6 custom-cards">
+      <div class="card blue-grey darken-1 round-card">
+        <div class="card-content white-text">
+          <span class="card-title">Card Title</span>
+          <p>hi</p>
+          <div class="air-index">
+            <h6>Air-index:</h6>
+            <span><i class='fas fa-wind' style='font-size:40px;color:rgb(74, 129, 173)'></i></span>
+          </div>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
 
+    <div class="col s12 m6 custom-cards">
+      <div class="card blue-grey darken-1 round-card">
+        <div class="card-content white-text">
+          <span class="card-title">Card Title</span>
+          <p>hi</p>
+          <div class="air-index">
+            <h6>Air-index:</h6>
+            <span><i class='fas fa-wind' style='font-size:40px;color:rgb(74, 129, 173)'></i></span>
+          </div>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
 
-    </main>
-
+    <div class="col s12 m6 custom-cards">
+      <div class="card blue-grey darken-1 round-card">
+        <div class="card-content white-text">
+          <span class="card-title">Card Title</span>
+          <p>hi</p>
+          <div class="air-index">
+            <h6>Air-index:</h6>
+            <span><i class='fas fa-wind' style='font-size:40px;color:rgb(74, 129, 173)'></i></span>
+          </div>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
 
   </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="script.js"></script>
 </body>
 

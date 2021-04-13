@@ -1,12 +1,17 @@
 
+var userInput = $('#input-search').val()
 
-var userInput = $('#user-input').val()
+var card = document.querySelector(".card-container");
+var startBtn = document.querySelector('#input-button');
+var inputText = document.querySelector('#input-search');
+var headOne = document.querySelector('h1');
 
+startBtn.addEventListener('click',displayCards);
 
-$('#select-city').click(function (event) {
+$('#input-button').click(function (event) {
   event.preventDefault();
   // console.log('working')
-  var userInput = $('#user-input').val()
+  var userInput = $('#input-search').val()
   console.log(userInput)
   // getApi();
 
@@ -39,7 +44,7 @@ function getAQI(lat, lon) {
 }
 
 function getApi(lat, lon) {
-  var userInput = $('#user-input').val()
+  var userInput = $('#input-search').val()
   var recAreaUrl = 'https://upenn-cors-anywhere.herokuapp.com/https://ridb.recreation.gov/api/v1/recareas?query='+userInput+'&latitude='+lat.toFixed(1)+'&longitude='+lon.toFixed(1)+'&limit=10&offset=0&full=true&radius=100';
   console.log(recAreaUrl)
   fetch(recAreaUrl, { headers: { apikey: "20f84e32-f5d0-480b-9f55-dd5f515af6af" } })
@@ -59,4 +64,14 @@ function getApi(lat, lon) {
         console.log(data.RECDATA[i].RECAREAADDRESS[0].RecAreaStreetAddress1 + " " + data.RECDATA[i].RECAREAADDRESS[0].PostalCode + " " + data.RECDATA[i].RECAREAADDRESS[0].City + " " + data.RECDATA[i].RECAREAADDRESS[0].AddressStateCode)
       }
     })
+}
+
+function displayCards(e){
+  e.preventDefault();
+
+startBtn.classList.add('hide');
+inputText.classList.add('hide');
+headOne.classList.add('hide');
+card.classList.remove('hide')
+
 }
