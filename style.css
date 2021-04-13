@@ -62,6 +62,30 @@ h1:hover{
   flex-wrap: wrap;
   box-shadow: 10px 10px 30px 10px #000000;
 }
+.back-btn{
+  position: absolute;
+  left: 40%;
+  bottom: 10%;
+  height: 50px;
+  width: 250px;
+  background-color: #f0b800;
+  border: none;
+  color: black;
+  border-radius: 10px;
+}
+.back-btn:hover{
+  background-color: rgb(44, 106, 148);
+  color: white;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .back-btn{
+    position: absolute;
+    bottom:20px;
+    left: 100px;
+
+  }
+}
 @media screen and (max-width: 600px) {
   .round-card{
     width: 200px;
