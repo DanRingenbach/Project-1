@@ -33,6 +33,5 @@ function displayCards(e){
 startBtn.classList.add('hide');
 inputText.classList.add('hide');
 headOne.classList.add('hide');
-card.classList.remove('hide')
-
+card.classList.remove('hide');
 }
