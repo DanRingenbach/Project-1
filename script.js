@@ -1,11 +1,16 @@
 
 var userInput = $('#input-search').val()
-
+var backBtn = document.querySelector('#backBtn');
 var card = document.querySelector(".card-container");
 var startBtn = document.querySelector('#input-button');
 var inputText = document.querySelector('#input-search');
 var headOne = document.querySelector('h1');
 
+
+
+
+
+backBtn.addEventListener('click',backButton);
 
 
 $('#input-button').click(function (event) {
@@ -85,4 +90,22 @@ function getApi(lat, lon) {
     })
 }
 
+
+
+
+startBtn.classList.add('hide');
+inputText.classList.add('hide');
+headOne.classList.add('hide');
+card.classList.remove('hide');
+backBtn.classList.remove('hide');
+}
+ function backButton(e){
+   e.preventDefault();
+
+   startBtn.classList.remove('hide');
+  inputText.classList.remove('hide');
+  headOne.classList.remove('hide');
+  card.classList.add('hide');
+  backBtn.classList.add('hide');
+ }
 
