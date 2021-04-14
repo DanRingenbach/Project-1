@@ -75,7 +75,7 @@ function getApi(lat, lon) {
         console.log(data.RECDATA[i].RecAreaDescription)
         console.log(data.RECDATA[i].RECAREAADDRESS[0].RecAreaStreetAddress1 + " " + data.RECDATA[i].RECAREAADDRESS[0].PostalCode + " " + data.RECDATA[i].RECAREAADDRESS[0].City + " " + data.RECDATA[i].RECAREAADDRESS[0].AddressStateCode)
 
-        $('.card-container').append(div1)
+        $('#recArea').append(div1)
         div1.append(div2)
         div2.append(div3)
         div3.append(title, description, address)
@@ -84,28 +84,19 @@ function getApi(lat, lon) {
         inputText.classList.add('hide');
         headOne.classList.add('hide');
         card.classList.remove('hide')
-
+        
 
       }
     })
 }
 
-
-
-
-startBtn.classList.add('hide');
-inputText.classList.add('hide');
-headOne.classList.add('hide');
-card.classList.remove('hide');
-backBtn.classList.remove('hide');
-}
- function backButton(e){
-   e.preventDefault();
-
+  function backButton(e){
+    e.preventDefault();
    startBtn.classList.remove('hide');
-  inputText.classList.remove('hide');
-  headOne.classList.remove('hide');
-  card.classList.add('hide');
-  backBtn.classList.add('hide');
- }
+   inputText.classList.remove('hide');
+   headOne.classList.remove('hide');
+   card.classList.add('hide');
+   backBtn.classList.add('hide');
+  }
+
 
