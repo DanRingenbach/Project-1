@@ -6,7 +6,12 @@ var startBtn = document.querySelector('#input-button');
 var inputText = document.querySelector('#input-search');
 var headOne = document.querySelector('h1');
 
-backBtn.addEventListener('click',backButton)
+
+
+
+
+backBtn.addEventListener('click',backButton);
+
 
 $('#input-button').click(function (event) {
   event.preventDefault();
@@ -93,6 +98,5 @@ function getApi(lat, lon) {
    card.classList.add('hide');
    backBtn.classList.add('hide');
   }
-
 
 
