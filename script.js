@@ -83,9 +83,8 @@ function getApi(lat, lon) {
         startBtn.classList.add('hide');
         inputText.classList.add('hide');
         headOne.classList.add('hide');
-        card.classList.remove('hide')
-        
-
+        card.classList.remove('hide');
+        backBtn.classList.remove('hide');
       }
     })
 }
