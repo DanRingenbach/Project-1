@@ -17,10 +17,10 @@ $('#input-button').click(function (event) {
   event.preventDefault();
   $('#recArea').empty();
   $('#AQI').empty();
-  // console.log('working')
+  
   var userInput = $('#input-search').val()
   console.log(userInput)
-  // getApi();
+  
 
   var locationAPI = 'https://api.opencagedata.com/geocode/v1/json?q=' + userInput + '&key=31fdf0bb1c3d44a3860a7b19963a2ac9'
   fetch(locationAPI)
@@ -32,7 +32,7 @@ $('#input-button').click(function (event) {
       if (data.results.length === 0) {
         alert('No Data Available')
       } else {
-        getApi(data.results[0].geometry.lat, data.results[0].geometry.lng)
+        getRecData(data.results[0].geometry.lat, data.results[0].geometry.lng)
       }
       // console.log(data.results[0].geometry.lat,data.results[0].geometry.lng)
     })
@@ -56,6 +56,7 @@ function getAQI(lat, lon) {
       var div3 = $('<div>').addClass('card-content white-text')
       var title = $('<span>').addClass('card-title').text('Air Quality Index in this Area')
       var number = $('<h1>').text(numberRaw)
+      
       if (numberRaw < 50) {
         number.css('color', 'green')
         console.log('working')
@@ -64,6 +65,7 @@ function getAQI(lat, lon) {
       } if (numberRaw > 101) {
         number.css('color', 'red')
       }
+      
       $('#AQI').append(div1)
       div1.append(div2)
       div2.append(div3)
@@ -72,7 +74,7 @@ function getAQI(lat, lon) {
     })
 }
 
-function getApi(lat, lon) {
+function getRecData(lat, lon) {
   var userInput = $('#input-search').val()
   var recAreaUrl = 'https://upenn-cors-anywhere.herokuapp.com/https://ridb.recreation.gov/api/v1/recareas?query=' + userInput + '&latitude=' + lat.toFixed(1) + '&longitude=' + lon.toFixed(1) + '&limit=10&offset=0&full=true&radius=100';
   console.log(recAreaUrl)
