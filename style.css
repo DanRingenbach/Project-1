@@ -2,11 +2,16 @@
   box-sizing: border-box;
 }
 body{
-  height: 100vh;
-  background-image:linear-gradient(rgb(0, 0, 0,0.4),rgb(0, 0, 0, 0.4)),url(canyon.jpeg) ;
+  background: linear-gradient(rgb(0, 0, 0,0.4),rgb(0, 0, 0, 0.4)),url(canyon.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: center;
+}
+header{
   display: flex;
+  position: relative;
+  top: 25%;
   justify-content: center;
   align-items: center;
 }
@@ -15,7 +20,7 @@ h1{
   text-align: center;
   color: white;
   margin-bottom: 70px;
-  font-size: 60px;
+  font-size: 80px;
   letter-spacing: 2px;
 }
 h1:hover{
@@ -49,29 +54,31 @@ h1:hover{
   cursor: pointer;
 }
 .custom-cards{
-  display: inline-grid;
-  grid-template-columns:2fr 2fr;
-  position: relative;
-  left: 10%;
+  display: inline-block;
+  flex-wrap: wrap;
+  line-height: 15px;
+  font-size: 10px;
+  
 }
 .hide{
   display: none;
 }
 
 .round-card{
+  width: 70%;
   flex-wrap: wrap;
   box-shadow: 10px 10px 30px 10px #000000;
 }
 .back-btn{
   position: absolute;
-  left: 40%;
-  bottom: 10%;
+  left:80%;
+  top: 450px;
   height: 50px;
-  width: 250px;
+  width: 150px;
   background-color: #f0b800;
   border: none;
   color: black;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .back-btn:hover{
   background-color: rgb(44, 106, 148);
@@ -81,21 +88,22 @@ h1:hover{
 @media screen and (max-width: 600px) {
   .back-btn{
     position: absolute;
-    bottom:20px;
-    left: 100px;
-
+    top:800px;
+    left: 60px;
+    width: 50%;
+  
   }
 }
 @media screen and (max-width: 600px) {
   .round-card{
-    width: 200px;
-
+    height:220px ;
   }
 }
 @media screen and (max-width: 600px) {
   .card-container{
-    display: grid;
-    grid-template-columns: 2fr 2fr;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
 
   }
 }
