@@ -5,8 +5,8 @@ var card = document.querySelector(".card-container");
 var startBtn = document.querySelector('#input-button');
 var inputText = document.querySelector('#input-search');
 var headOne = document.querySelector('h1');
-
-
+var AQI = document.querySelector('#AQI')
+var REC = document.querySelector('#recArea')
 
 
 
@@ -15,6 +15,8 @@ backBtn.addEventListener('click',backButton);
 
 $('#input-button').click(function (event) {
   event.preventDefault();
+  $('#recArea').empty();
+  $('#AQI').empty();
   // console.log('working')
   var userInput = $('#input-search').val()
   console.log(userInput)
@@ -43,8 +45,19 @@ function getAQI(lat, lon) {
       return response.json();
     })
     .then(function (data) {
-      // console.log(data)
+      console.log('working')
       console.log(data.data.current.pollution.aqius)
+      var div1 = $('<div>').addClass('col s4 m6 custom-cards')
+      var div2 = $('<div>').addClass('col card blue-grey darken-1 round-card')
+      var div3 = $('<div>').addClass('card-content white-text')
+      var title = $('<span>').addClass('card-title').text('Air Quality Index in this Area')
+      var number = $('<h3>').text(data.data.current.pollution.aqius)
+
+      $('#AQI').append(div1)
+      div1.append(div2)
+      div2.append(div3)
+      div3.append(title, number)
+      AQI.classList.remove('hide')
     })
 }
 
@@ -60,9 +73,9 @@ function getApi(lat, lon) {
       console.log(data)
       for (i = 0; i < 4; i++) {
         console.log(data.RECDATA.length)
-        var div1 = $('<div>').addClass('col s12 m6 custom-cards')
+        var div1 = $('<div>').addClass('col s4 custom-cards')
         console.log(div1)
-        var div2 = $('<div>').addClass('col card blue-grey darken-1 round-card')
+        var div2 = $('<div>').addClass('col card blue-grey darken-1 round-card card horizontal')
         var div3 = $('<div>').addClass('card-content white-text')
         var title = $('<span>').addClass('card-title').text(data.RECDATA[i].RecAreaName)
         console.log(title)
@@ -83,7 +96,7 @@ function getApi(lat, lon) {
         startBtn.classList.add('hide');
         inputText.classList.add('hide');
         headOne.classList.add('hide');
-        card.classList.remove('hide')
+        REC.classList.remove('hide')
         
 
       }
@@ -95,7 +108,7 @@ function getApi(lat, lon) {
    startBtn.classList.remove('hide');
    inputText.classList.remove('hide');
    headOne.classList.remove('hide');
-   card.classList.add('hide');
+   REC.classList.add('hide');
    backBtn.classList.add('hide');
   }
 
