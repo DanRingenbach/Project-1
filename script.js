@@ -71,7 +71,7 @@ function getApi(lat, lon) {
     })
     .then(function (data) {
       console.log(data)
-      for (i = 0; i < 4; i++) {
+      for (i = 0; i < data.RECDATA.length; i++) {
         console.log(data.RECDATA.length)
         var div1 = $('<div>').addClass('col s4 custom-cards')
         console.log(div1)

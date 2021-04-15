@@ -56,43 +56,51 @@ h1:hover{
 .custom-cards{
   display: inline-block;
   flex-wrap: wrap;
-  line-height: 15px;
-  font-size: 10px;
+  line-height: 17px;
+  font-size: 15px;
+  margin: 20px;
   
 }
 .hide{
   display: none;
 }
-
 .round-card{
-  width: 70%;
+  width: 65%;
   flex-wrap: wrap;
   box-shadow: 10px 10px 30px 10px #000000;
-  height: 320px;
+  height: 170px;
+  border-radius: 25px;
 }
 .back-btn{
-  position: absolute;
-  left:80%;
-  top: 450px;
-  height: 50px;
+  position: fixed;
+  left:75%;
+  bottom: 560px;
+  height: 100px;
   width: 150px;
   background-color: #f0b800;
   border: none;
   color: black;
-  border-radius: 20px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 30px 10px #000000;
 }
 .back-btn:hover{
   background-color: rgb(44, 106, 148);
   color: white;
   cursor: pointer;
 }
+.container{
+  position: fixed;
+  left:72%;
+  bottom: 100px;
+}
+
+
 @media screen and (max-width: 600px) {
   .back-btn{
     position: absolute;
     top:800px;
     left: 60px;
     width: 50%;
-  
   }
 }
 @media screen and (max-width: 600px) {
@@ -118,7 +126,6 @@ h1:hover{
   .search-field{
     width: 70%;
     margin-left: 50px;
-   
   }
 }
 @media screen and (max-width: 600px) {
