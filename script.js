@@ -99,6 +99,8 @@ function getApi(lat, lon) {
         REC.classList.remove('hide')
         
 
+        card.classList.remove('hide');
+        backBtn.classList.remove('hide');
       }
     })
 }
