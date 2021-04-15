@@ -45,13 +45,13 @@ function getAQI(lat, lon) {
       return response.json();
     })
     .then(function (data) {
-      console.log('working')
+      console.log(data)
       console.log(data.data.current.pollution.aqius)
       var div1 = $('<div>').addClass('col s4 m6 custom-cards')
       var div2 = $('<div>').addClass('col card blue-grey darken-1 round-card')
       var div3 = $('<div>').addClass('card-content white-text')
       var title = $('<span>').addClass('card-title').text('Air Quality Index in this Area')
-      var number = $('<h3>').text(data.data.current.pollution.aqius)
+      var number = $('<h1>').text(data.data.current.pollution.aqius)
 
       $('#AQI').append(div1)
       div1.append(div2)
@@ -71,7 +71,7 @@ function getApi(lat, lon) {
     })
     .then(function (data) {
       console.log(data)
-      for (i = 0; i < 4; i++) {
+      for (i = 0; i < data.RECDATA.length; i++) {
         console.log(data.RECDATA.length)
         var div1 = $('<div>').addClass('col s4 custom-cards')
         console.log(div1)
@@ -81,6 +81,7 @@ function getApi(lat, lon) {
         console.log(title)
         var description = $('<p>').text(data.RECDATA[i].RecAreaDescription)
         var address = $('<p>').text(data.RECDATA[i].RECAREAADDRESS[0].RecAreaStreetAddress1 + " " + data.RECDATA[i].RECAREAADDRESS[0].PostalCode + " " + data.RECDATA[i].RECAREAADDRESS[0].City + " " + data.RECDATA[i].RECAREAADDRESS[0].AddressStateCode)
+        var link = $('<href>').text(data.RECDATA[i].LINK[0].URL)
         // var name = $('<h6>')
 
       
@@ -91,7 +92,7 @@ function getApi(lat, lon) {
         $('#recArea').append(div1)
         div1.append(div2)
         div2.append(div3)
-        div3.append(title, description, address)
+        div3.append(title, description, address, link)
         
         startBtn.classList.add('hide');
         inputText.classList.add('hide');
@@ -112,6 +113,7 @@ function getApi(lat, lon) {
    headOne.classList.remove('hide');
    REC.classList.add('hide');
    backBtn.classList.add('hide');
+   AQI.classList.add('hide')
   }
 
 
