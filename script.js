@@ -57,7 +57,7 @@ function getAQI(lat, lon) {
       div1.append(div2)
       div2.append(div3)
       div3.append(title, number)
-      AQI.classList.remove('hide')
+      AQI.classList.remove('hide');
     })
 }
 
@@ -75,7 +75,7 @@ function getApi(lat, lon) {
         console.log(data.RECDATA.length)
         var div1 = $('<div>').addClass('col s4 custom-cards')
         console.log(div1)
-        var div2 = $('<div>').addClass('col card blue-grey darken-1 round-card card horizontal')
+        var div2 = $('<div>').addClass('col card round-card card horizontal')
         var div3 = $('<div>').addClass('card-content white-text')
         var title = $('<span>').addClass('card-title').text(data.RECDATA[i].RecAreaName)
         console.log(title)
@@ -113,7 +113,7 @@ function getApi(lat, lon) {
    headOne.classList.remove('hide');
    REC.classList.add('hide');
    backBtn.classList.add('hide');
-   AQI.classList.add('hide')
+   AQI.classList.add('hide');
   }
 
 
