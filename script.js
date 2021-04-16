@@ -55,7 +55,7 @@ function getAQI(lat, lon) {
       var div2 = $('<div>').addClass('col card blue-grey darken-1 round-card')
       var div3 = $('<div>').addClass('card-content white-text')
       var title = $('<span>').addClass('card-title').text('Air Quality Index in this Area')
-      var number = $('<h1>').text(numberRaw)
+      var number = $('<h2>').text(numberRaw)
       
       if (numberRaw < 50) {
         number.css('color', 'green')
@@ -116,13 +116,9 @@ function getRecData(lat, lon) {
           inputText.classList.add('hide');
           headOne.classList.add('hide');
           REC.classList.remove('hide')
-
-
           card.classList.remove('hide');
           backBtn.classList.remove('hide');
         }
-
-
         getAQI(lat, lon)
       }
     })
