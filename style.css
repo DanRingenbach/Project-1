@@ -16,7 +16,7 @@ header{
   align-items: center;
 }
 h1{
-   font-family:'Monoton', cursive; 
+   font-family:'Dela Gothic One', cursive; 
   text-align: center;
   color: white;
   margin-bottom: 70px;
@@ -131,11 +131,12 @@ color: rgb(240, 11, 11);
     display:inline;
   }
   h1{
-    margin-bottom: 0px;
+    margin-bottom: 40px;
+    font-size: 60px;
   }
   p{
-    font-size: 12px;
-    line-height: 10px;
+    font-size: 15px;
+    line-height: 15px;
   }
   .custom-cards{
     display: inline-flex;
@@ -143,8 +144,11 @@ color: rgb(240, 11, 11);
     padding: 15px 7px;
     width:120%;
   }
-  span{
-    font-size: 700px;
+  .search-btn{
+    margin-left: 10px;
   }
-
+  .form-box{
+    width: 300px;
+    margin-left: 20px;
+  }
 }
