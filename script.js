@@ -126,6 +126,7 @@ function getRecData(lat, lon) {
 
 function backButton(e) {
   e.preventDefault();
+  console.log('working')
   startBtn.classList.remove('hide');
   inputText.classList.remove('hide');
   headOne.classList.remove('hide');
